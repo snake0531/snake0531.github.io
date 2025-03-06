@@ -17,12 +17,14 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const sn = urlParams.get('sn');
+    const bu = urlParams.get('bu');
 
     // 顯示 SN 碼與對應資訊（靜態示例，可自行擴充）
     const snInfo = document.getElementById('sn-info');
     if (sn) {
       snInfo.innerHTML = `
         <h3>SN 碼：${sn}</h3>
+        <p>廠商：${bu}</p>
         <p>生產日期：2023-08-01</p>
         <p>保修狀態：有效至 2025-08-01</p>
       `;
